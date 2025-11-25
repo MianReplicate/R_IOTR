@@ -1,8 +1,8 @@
 ﻿using System.Collections.Generic;
 
-namespace GenderAcceptance.Mian;
+namespace GenderAcceptance.Mian.Utilities;
 
-public class Constants
+public static class Constants
 {
     public const string Version = "1.1";
 

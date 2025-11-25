@@ -2,9 +2,11 @@
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Linq;
+using GenderAcceptance.Mian.Utilities;
 using RimWorld;
 using Verse;
 using Verse.Grammar;
+using GenderUtility = GenderAcceptance.Mian.Utilities.GenderUtility;
 
 namespace GenderAcceptance.Mian;
 
@@ -129,7 +131,7 @@ public static class TransKnowledgeManager
                     rulePacks.AddRange(extraPacks);
 
                 rulePacks.Add(GADefOf.Found_Out_About_Gender_Identity);
-                if (GenderUtility.DoesChaserSeeTrans(pawn, otherPawn))
+                if (pawn.FindsExtraordinarilyAttractive(otherPawn))
                     rulePacks.Add(GADefOf.Chaser_Found_Out);
 
                 foreach (var grammarPack in rulePacks)

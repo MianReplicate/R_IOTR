@@ -1,6 +1,8 @@
 ﻿using GenderAcceptance.Mian.Dependencies;
+using GenderAcceptance.Mian.Utilities;
 using RimWorld;
 using Verse;
+using GenderUtility = GenderAcceptance.Mian.Utilities.GenderUtility;
 
 namespace GenderAcceptance.Mian.ThoughtWorkers;
 

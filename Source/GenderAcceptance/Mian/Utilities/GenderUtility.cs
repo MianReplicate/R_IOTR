@@ -3,19 +3,30 @@ using GenderAcceptance.Mian.Dependencies;
 using RimWorld;
 using Verse;
 
-namespace GenderAcceptance.Mian;
+namespace GenderAcceptance.Mian.Utilities;
 
 public static class GenderUtility
 {
+    /// <summary>
+    ///     Gets the chaser factor for if a pawn finds another more attractive because of their chaserness
+    /// </summary>
+    /// <param name="pawn">The chaser</param>
+    /// <param name="target">The receiver</param>
+    /// <returns>The value for being more attractive to a chaser</returns>
     public static float ChaserFactor(Pawn pawn, Pawn target)
     {
-        if (DoesChaserSeeTrans(pawn, target))
+        if (pawn.FindsExtraordinarilyAttractive(target))
             return 2f;
         return 0f;
     }
 
-    // does a chaser find the trans
-    public static bool DoesChaserSeeTrans(Pawn initiator, Pawn recipient)
+    /// <summary>
+    ///     If initiator is a chaser, and the recipient is transgender according to the initiator's pov and they are attracted to their gender, they will find them more attractive
+    /// </summary>
+    /// <param name="initiator">The chaser pawn</param>
+    /// <param name="recipient">The receiver</param>
+    /// <returns>Whether initiator is a chaser and if they find recipient particularly attractive for being trans</returns>
+    public static bool FindsExtraordinarilyAttractive(this Pawn initiator, Pawn recipient)
     {
         if (!recipient.RaceProps.Humanlike)
             return false;
@@ -24,10 +35,16 @@ public static class GenderUtility
         return false;
     }
 
+    /// <summary>
+    ///     Makes a status log of what makes a pawn transphobic towards another
+    /// </summary>
+    /// <param name="pawn">The pawn to check for transphobia</param>
+    /// <param name="recipient">The receiver</param>
+    /// <returns>The status of the pawn's transphobia to another</returns>    
     public static TransphobicStatus GetTransphobicStatus(this Pawn pawn, Pawn recipient = null)
     {
         var chaser = recipient != null
-            ? DoesChaserSeeTrans(pawn, recipient)
+            ? FindsExtraordinarilyAttractive(pawn, recipient)
             : pawn.story?.traits?.HasTrait(GADefOf.Chaser) ?? false;
         var transphobicTrait = pawn.story?.traits?.HasTrait(GADefOf.Transphobic) ?? false;
         var transphobicPrecept = pawn.GetCurrentIdentity() == GenderIdentity.Cisgender
@@ -43,11 +60,21 @@ public static class GenderUtility
         };
     }
 
+    /// <summary>
+    ///     Gets the opposite biological sex for a pawn (or None if neither)
+    /// </summary>
+    /// <param name="pawn">The pawn to use</param>
+    /// <returns>The opposite biological sex</returns>
     public static Gender GetOppositeGender(this Pawn pawn)
     {
         return pawn.gender == Gender.Female ? Gender.Male : pawn.gender == Gender.Male ? Gender.Female : Gender.None;
     }
     
+    /// <summary>
+    ///     Counts the amount of a specific gender there is on a map from a pawn's pov
+    /// </summary>
+    /// <param name="perceiver">The pawn to perceive from</param>
+    /// <returns>The amount of gendered individuals there are</returns>
     public static int CountGenderIndividuals(Pawn perceiver, GenderIdentity gender)
     {
         var count = 0;
@@ -67,11 +94,21 @@ public static class GenderUtility
         return count;
     }
 
+    /// <summary>
+    ///     Checks whether the culture is transphobic, accepting or neutral
+    /// </summary>
+    /// <param name="pawn">The pawn to check</param>
+    /// <returns>Whether the pawn is in a culture that is transphobic, accepting or neutral</returns>
     public static CultureViewOnTrans CultureOpinionOnTrans(this Pawn pawn)
     {
         return TransDependencies.TransLibrary.CultureOpinionOnTrans(pawn);
     }
 
+    /// <summary>
+    ///     Retrieves whether the pawn is transgender or cisgender. Defaults to true for enby folks
+    /// </summary>
+    /// <param name="pawn">The pawn to check</param>
+    /// <returns>The pawn's gender identity</returns>
     public static GenderIdentity GetCurrentIdentity(this Pawn pawn)
     {
         if (pawn.IsEnbyBySexTerm())
@@ -80,7 +117,11 @@ public static class GenderUtility
         return TransDependencies.TransLibrary.GetCurrentIdentity(pawn);
     }
 
-    // Used to help people figure out who is trans or not.
+    /// <summary>
+    ///     Determines whether the pawn's genitalia matches up with their gender identity. Defaults to true for androgynous folks
+    /// </summary>
+    /// <param name="pawn">THe pawn to check</param>
+    /// <returns>Whether genitalia matches up with the pawn's gender identity or not</returns>
     public static bool AppearsToHaveMatchingGenitalia(this Pawn pawn)
     {
         if (pawn.GetGenderedAppearance() == Gendered.Androgynous)
@@ -89,6 +130,11 @@ public static class GenderUtility
         return TransDependencies.TransLibrary.AppearsToHaveMatchingGenitalia(pawn);
     }
 
+    /// <summary>
+    ///     Gets the gendered appearance for a gender
+    /// </summary>
+    /// <param name="gender">The gender to check</param>
+    /// <returns>The gendered appearance for the gender</returns>
     public static Gendered GetGenderedAppearance(this Gender gender)
     {
         switch (gender)
@@ -102,17 +148,32 @@ public static class GenderUtility
         }
     }
 
+    /// <summary>
+    ///     Gets appearance based on their gendered points
+    /// </summary>
+    /// <param name="pawn">The pawn to check</param>
+    /// <returns>Whether they are masculine, feminine, or androgynous</returns>
     public static Gendered GetGenderedAppearance(this Pawn pawn)
     {
         var genderedPoints = pawn.GetGenderedPoints();
         return genderedPoints > 1 ? Gendered.Masculine : genderedPoints < -1 ? Gendered.Feminine : Gendered.Androgynous;
     }
-
+    
+    /// <summary>
+    ///     Calculates a pawn's gendered points, the higher the more masculine, the lower the more feminine
+    /// </summary>
+    /// <param name="pawn">The pawn to check</param>
+    /// <returns>The gendered points for the pawn</returns>
     public static float GetGenderedPoints(this Pawn pawn)
     {
         return TransDependencies.TransLibrary.GetGenderedPoints(pawn);
     }
 
+    /// <summary>
+    ///     Determines whether one is enby by if their biological sex is not male or female
+    /// </summary>
+    /// <param name="pawn">The pawn to check</param>
+    /// <returns>Whether a pawn is enby or not</returns>
 
     public static bool IsEnbyBySexTerm(this Pawn pawn)
     {

@@ -1,4 +1,5 @@
-﻿using LoveyDoveySexWithRosaline;
+﻿using GenderAcceptance.Mian.Utilities;
+using LoveyDoveySexWithRosaline;
 using Verse;
 
 namespace GenderAcceptance.Mian.Dependencies;

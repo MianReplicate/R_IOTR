@@ -1,6 +1,8 @@
-﻿using HarmonyLib;
+﻿using GenderAcceptance.Mian.Utilities;
+using HarmonyLib;
 using RimWorld;
 using Verse;
+using GenderUtility = GenderAcceptance.Mian.Utilities.GenderUtility;
 
 namespace GenderAcceptance.Mian.Patches;
 
@@ -12,7 +14,7 @@ public static class Pawn_RelationsTracker
     [HarmonyPostfix]
     public static void AddChaserFactor(Pawn otherPawn, ref float __result, Pawn ___pawn)
     {
-        if (GenderUtility.DoesChaserSeeTrans(___pawn, otherPawn))
+        if (___pawn.FindsExtraordinarilyAttractive(otherPawn))
             __result *= 2;
     }
 

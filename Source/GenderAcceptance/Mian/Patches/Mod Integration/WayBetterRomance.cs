@@ -5,6 +5,7 @@ using System.Text;
 using BetterRomance;
 using HarmonyLib;
 using Verse;
+using GenderUtility = GenderAcceptance.Mian.Utilities.GenderUtility;
 
 namespace GenderAcceptance.Mian.Patches.Mod_Integration;
 

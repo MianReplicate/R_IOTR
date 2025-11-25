@@ -1,5 +1,7 @@
-﻿using HarmonyLib;
+﻿using GenderAcceptance.Mian.Utilities;
+using HarmonyLib;
 using Verse;
+using GenderUtility = GenderAcceptance.Mian.Utilities.GenderUtility;
 
 namespace GenderAcceptance.Mian.Patches;
 
@@ -12,7 +14,7 @@ public static class LovePartnerRelationUtility
     public static void Postfix(Pawn generated, Pawn other, ref float __result)
     {
         //Adjust with chaser rating
-        if (GenderUtility.DoesChaserSeeTrans(generated, other))
+        if (generated.FindsExtraordinarilyAttractive(other))
             __result *= 2f;
     }
 }

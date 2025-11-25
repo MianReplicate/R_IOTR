@@ -1,8 +1,10 @@
 ﻿using System.Collections.Generic;
 using GenderAcceptance.Mian.Needs;
+using GenderAcceptance.Mian.Utilities;
 using HarmonyLib;
 using RimWorld;
 using Verse;
+using GenderUtility = GenderAcceptance.Mian.Utilities.GenderUtility;
 
 namespace GenderAcceptance.Mian.Patches;
 
@@ -32,7 +34,7 @@ public static class MemoryThoughtHandler
                     constants: constants);
             }
 
-            if (GenderUtility.DoesChaserSeeTrans(__instance.pawn, otherPawn))
+            if (__instance.pawn.FindsExtraordinarilyAttractive(otherPawn))
             {
                 ((Chaser_Need)__instance.pawn.needs?.TryGetNeed(GADefOf.Chaser_Need))?.GainNeedFromSex();
                 otherPawn.needs?.mood?.thoughts?.memories?.TryGainMemory(GADefOf.Dehumanized, __instance.pawn);

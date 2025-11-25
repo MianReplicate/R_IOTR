@@ -4,6 +4,7 @@ using System.Text;
 using GenderAcceptance.Mian.Patches.Mod_Integration;
 using HarmonyLib;
 using Verse;
+using GenderUtility = GenderAcceptance.Mian.Utilities.GenderUtility;
 
 namespace GenderAcceptance.Mian.Patches;
 

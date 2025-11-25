@@ -1,5 +1,6 @@
 ﻿using GenderAcceptance.Mian.Dependencies;
 using GenderAcceptance.Mian.Patches.Mod_Integration;
+using GenderAcceptance.Mian.Utilities;
 using HarmonyLib;
 using UnityEngine;
 using Verse;

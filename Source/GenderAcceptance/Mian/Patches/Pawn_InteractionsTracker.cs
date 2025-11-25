@@ -1,9 +1,11 @@
 ﻿using System.Linq;
 using GenderAcceptance.Mian.Dependencies;
 using GenderAcceptance.Mian.Needs;
+using GenderAcceptance.Mian.Utilities;
 using HarmonyLib;
 using RimWorld;
 using Verse;
+using GenderUtility = GenderAcceptance.Mian.Utilities.GenderUtility;
 
 namespace GenderAcceptance.Mian.Patches;
 
@@ -16,7 +18,7 @@ public static class Pawn_InteractionsTracker
     {
         if (!__result || !recipient.RaceProps.Humanlike || !___pawn.RaceProps.Humanlike)
             return;
-        if (GenderUtility.DoesChaserSeeTrans(___pawn, recipient))
+        if (___pawn.FindsExtraordinarilyAttractive(recipient))
             ((Chaser_Need)___pawn.needs?.TryGetNeed(GADefOf.Chaser_Need))?.GainNeedFromInteraction();
 
         var smallTalk = DefDatabase<InteractionDef>.GetNamedSilentFail("Rimpsyche_Smalltalk");

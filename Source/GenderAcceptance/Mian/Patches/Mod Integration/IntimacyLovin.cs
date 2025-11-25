@@ -1,6 +1,8 @@
-﻿using HarmonyLib;
+﻿using GenderAcceptance.Mian.Utilities;
+using HarmonyLib;
 using LoveyDoveySexWithEuterpe;
 using Verse;
+using GenderUtility = GenderAcceptance.Mian.Utilities.GenderUtility;
 
 namespace GenderAcceptance.Mian.Patches.Mod_Integration;
 
@@ -21,14 +23,14 @@ public static class IntimacyLovin
     public static void AddChaserRandomSelectionFactor(Pawn initiator, Pawn recipient, ref float __result)
     {
         //Adjust with chaser rating
-        if (GenderUtility.DoesChaserSeeTrans(initiator, recipient))
+        if (initiator.FindsExtraordinarilyAttractive(recipient))
             __result *= 2f;
     }
 
     public static void AddChaserDispositionFactor(Pawn initiator, Pawn recipient, ref float __result)
     {
         //Adjust with chaser rating
-        if (GenderUtility.DoesChaserSeeTrans(initiator, recipient))
+        if (initiator.FindsExtraordinarilyAttractive(recipient))
             __result *= 2f;
     }
 

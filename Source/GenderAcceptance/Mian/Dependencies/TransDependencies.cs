@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using GenderAcceptance.Mian.Utilities;
 using Verse;
 
 namespace GenderAcceptance.Mian.Dependencies;
@@ -55,6 +56,18 @@ public static class TransDependencies
         { "lovelydovey.sex.withrosaline", typeof(GenderWorks) },
         { "runaway.simpletrans", typeof(SimpleTrans) }
     };
+
+    /// <summary>
+    ///     Adds an additional trans dependency. Use if you are making a trans mod and are trying to add compatibility with this mod!
+    /// </summary>
+    /// <param name="id">The identification of the mod</param>
+    /// <param name="type">The class type, this should implement ITransDependency</param>
+    public static void AddAdditionalTransLibraryToSetup(string id, Type type)
+    {
+        if (!type.IsAssignableFrom(typeof(ITransDependency)))
+            throw new ArgumentException($"{type} does not implement ITransDependency!");
+        TransLibraries.Add(id, type);
+    }
 
     public static void Setup()
     {

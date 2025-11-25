@@ -2,9 +2,9 @@
 using Verse;
 using Verse.AI;
 
-namespace GenderAcceptance.Mian;
+namespace GenderAcceptance.Mian.Utilities;
 
-public class TransvestigateUtility
+public static class TransvestigateUtility
 {
     public static bool CanChaseAndInvestigate(
         Pawn bully,

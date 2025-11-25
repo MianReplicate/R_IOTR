@@ -1,4 +1,4 @@
-﻿namespace GenderAcceptance.Mian;
+﻿namespace GenderAcceptance.Mian.Utilities;
 
 public static class Helper
 {
