@@ -56,8 +56,9 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Mian\Patches.cs" />
     <Compile Include="Mian\R_IOTR.cs" />
-    <Compile Include="Mian\Utilities\Constants.cs" />
+    <Compile Include="Mian\Utilities\CompatibilityUtility.cs" />
     <Compile Include="Mian\Utilities\Helper.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

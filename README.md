@@ -16,3 +16,5 @@ If there are any issues I have missed, please let me know and I will patch them!
 If you like what I do and would like to donate, here are some of my links! Do please keep in mind that this is not obligatory at all, and it will not affect mod development whether you donate or not. I create mods on RW for a hobby, not for a living.
 
 Patreon: https://patreon.com/loxi?utm_medium=unknown&utm_source=join_link&utm_campaign=creatorshare_creator&utm_content=copyLink
+
+Source: https://github.com/MianReplicate/R_IOTR

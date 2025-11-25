@@ -13,7 +13,7 @@ public static class Startup
     {
         Helper.Log("When you've got romance on the rim, you've also got intimacy!");
 
-        var harmony = new Harmony("rimworld.mian.genderacceptance");
+        var harmony = new Harmony("rimworld.mian.r_iotr");
         harmony.PatchAll();
     }
 }
