@@ -14,7 +14,7 @@ public static class Pawn_InteractionsTracker
     [HarmonyPostfix]
     public static void TryInteractWith(Pawn ___pawn, bool __result, Pawn recipient, InteractionDef intDef)
     {
-        if (!__result || !recipient.RaceProps.Humanlike)
+        if (!__result || !recipient.RaceProps.Humanlike || !___pawn.RaceProps.Humanlike)
             return;
         if (GenderUtility.DoesChaserSeeTrans(___pawn, recipient))
             ((Chaser_Need)___pawn.needs?.TryGetNeed(GADefOf.Chaser_Need))?.GainNeedFromInteraction();
