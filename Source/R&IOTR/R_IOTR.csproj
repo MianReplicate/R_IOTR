@@ -1,0 +1,102 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <OutputType>Library</OutputType>
+    <RootNamespace>R_IOTR</RootNamespace>
+    <AssemblyName>R_IOTR</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <LangVersion>latest</LangVersion>
+    <AllowUnsafeBlocks>True</AllowUnsafeBlocks>
+    <GenerateAssemblyInfo>False</GenerateAssemblyInfo>
+
+    <DebugType>embedded</DebugType>
+    <EmbedAllSources>true</EmbedAllSources>
+    <DebugSymbols>false</DebugSymbols>
+    
+    <OutputPath>../../1.6/Assemblies/</OutputPath>
+    <AppendTargetFrameworkToOutputPath>false</AppendTargetFrameworkToOutputPath>
+    <AppendRuntimeIdentifierToOutputPath>false</AppendRuntimeIdentifierToOutputPath>
+  </PropertyGroup>
+
+  <PropertyGroup>
+    <ModName>Topic of Gender</ModName>
+  </PropertyGroup>
+  
+  <ItemGroup>
+
+<!--    Set a RimWorldPath environment variable in your computer to the path of RimWorld! -->
+    <Reference Include="RimWorld">
+      <HintPath>$(RimWorldPath)\RimWorldWin64_Data\Managed\Assembly-CSharp.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+
+    <Reference Include="UnityEngine">
+      <HintPath>$(RimWorldPath)\RimWorldWin64_Data\Managed\UnityEngine.CoreModule.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+
+    <Reference Include="System">
+      <HintPath>$(RimWorldPath)\RimWorldWin64_Data\Managed\System.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+
+    <Reference Include="Mscorlib">
+      <HintPath>$(RimWorldPath)\RimWorldWin64_Data\Managed\mscorlib.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    
+<!--    Subscribe to the dependencies below-->
+    <Reference Include="IntimacyLovin">
+      <HintPath>$(RimWorldPath)\..\..\workshop\content\294100\3498422643\1.6\Assemblies\LoveyDoveySexWithEuterpe.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="ROTR">
+      <HintPath>$(RimWorldPath)\..\..\workshop\content\294100\2654432921\1.6\Assemblies\RomanceOnTheRim.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Mian\R_IOTR.cs" />
+    <Compile Include="Mian\Utilities\Constants.cs" />
+    <Compile Include="Mian\Utilities\Helper.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="Lib.Harmony.Ref" Version="2.4.1" />
+    <PackageReference Include="System.Reflection.Emit" Version="4.7.0" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+
+  <!-- Post-build deployment -->
+  <Target Name="PostBuild" AfterTargets="PostBuildEvent">
+    <Message Text="Deploying Gender Acceptance to RimWorld..." Importance="high" />
+
+    <!-- Remove existing mod from RimWorld if it exists -->
+    <RemoveDir Directories="$(RimWorldPath)\Mods\$(ModName)" Condition="Exists('$(RimWorldPath)\Mods\$(ModName)')" />
+
+    <!-- Define what to copy -->
+    <ItemGroup>
+      <!-- Source folder (excluding obj and bin) -->
+      <SourceFiles Include="$(MSBuildProjectDirectory)\**\*.*"
+                   Exclude="$(MSBuildProjectDirectory)\obj\**\*.*;$(MSBuildProjectDirectory)\bin\**\*.*;$(MSBuildProjectDirectory)\.idea\**\*.*;$(MSBuildProjectDirectory)\packages\**\*.*;" />
+      
+      <!-- About folder -->
+      <AboutFiles Include="$(MSBuildProjectDirectory)\..\..\About\**\*.*" />
+
+      <!-- Root files -->
+      <RootFiles Include="$(MSBuildProjectDirectory)\..\..\LICENSE" />
+      <RootFiles Include="$(MSBuildProjectDirectory)\..\..\README.md" />
+      <RootFiles Include="$(MSBuildProjectDirectory)\..\..\loadFolders.xml"/>
+      
+      <SixteenFiles Include="$(MSBuildProjectDirectory)\..\..\1.6\**\*.*" />
+    </ItemGroup>
+
+    <!-- Copy all defined files -->
+    <Copy SourceFiles="@(SourceFiles)" DestinationFiles="@(SourceFiles->'$(RimWorldPath)\Mods\$(ModName)\Source\%(RecursiveDir)%(Filename)%(Extension)')" />
+    <Copy SourceFiles="@(AboutFiles)" DestinationFiles="@(AboutFiles->'$(RimWorldPath)\Mods\$(ModName)\About\%(RecursiveDir)%(Filename)%(Extension)')" />
+    <Copy SourceFiles="@(RootFiles)" DestinationFiles="@(RootFiles->'$(RimWorldPath)\Mods\$(ModName)\%(Filename)%(Extension)')" />
+    <Copy SourceFiles="@(SixteenFiles)" DestinationFiles="@(SixteenFiles->'$(RimWorldPath)\Mods\$(ModName)\1.6\%(RecursiveDir)%(Filename)%(Extension)')" />
+
+    <Message Text="R_IOTR deployed successfully to $(RimWorldPath)\Mods\$(ModName)" Importance="high" />
+  </Target>
+</Project>

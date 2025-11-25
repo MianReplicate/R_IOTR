@@ -1,0 +1,310 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="cec9abca-034f-4f40-8e9c-b85eec383ca5" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/.idea.GenderAcceptance/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Mian/Utilities/Constants.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Mian/Utilities/Helper.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../1.6/Assemblies/GenderAcceptance.dll" beforeDir="false" afterPath="$PROJECT_DIR$/../../1.6/Assemblies/R_IOTR.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../1.6/Defs/BodyTypeGenderedDefs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../1.6/Defs/InteractionDefs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../1.6/Defs/JobDefs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../1.6/Defs/JoyDefs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../1.6/Defs/MentalStateDefs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../1.6/Defs/NeedDefs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../1.6/Defs/RulePackDefs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../1.6/Defs/ThoughtDefs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../1.6/Defs/TraitDefs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../1.6/Languages/English/Keyed/Main.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../1.6/Mods/Ideology/Defs/IPreceptDefs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../1.6/Mods/Ideology/Defs/IThoughtDefs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../1.6/Patches/Insult.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../1.6/Patches/TransvestigateMentalState.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../1.6/Textures/GenderAcceptance/UI/Issues/Transgender.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../About/About.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../About/About.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../README.md" beforeDir="false" afterPath="$PROJECT_DIR$/../../README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../GenderAcceptance/.idea/.idea.GenderAcceptance/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../GenderAcceptance/.idea/.idea.GenderAcceptance/.idea/encodings.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../GenderAcceptance/.idea/.idea.GenderAcceptance/.idea/indexLayout.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../GenderAcceptance/.idea/.idea.GenderAcceptance/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../GenderAcceptance/GenderAcceptance.csproj" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../GenderAcceptance/GenderAcceptance.sln" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../GenderAcceptance/GenderAcceptance.sln.DotSettings.user" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../GenderAcceptance/Mian/BodyTypeGenderedDef.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../GenderAcceptance/Mian/DebugActions.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../GenderAcceptance/Mian/Dependencies/CultureViewOnTrans.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../GenderAcceptance/Mian/Dependencies/DysGenderWorks.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../GenderAcceptance/Mian/Dependencies/Dysphoria.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../GenderAcceptance/Mian/Dependencies/GenderWorks.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../GenderAcceptance/Mian/Dependencies/SimpleTrans.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../GenderAcceptance/Mian/Dependencies/TransDependencies.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../GenderAcceptance/Mian/Dependencies/TransDependency.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../GenderAcceptance/Mian/GADefOf.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../GenderAcceptance/Mian/GameComps/VersionTracker.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../GenderAcceptance/Mian/GenderAcceptance.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../GenderAcceptance/Mian/GenderIdentity.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../GenderAcceptance/Mian/Gendered.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../GenderAcceptance/Mian/InteractionWorkers/ComeOut.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../GenderAcceptance/Mian/InteractionWorkers/Misgender.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../GenderAcceptance/Mian/InteractionWorkers/PurposeMisgender.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../GenderAcceptance/Mian/InteractionWorkers/Transvestigate.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../GenderAcceptance/Mian/JobDrivers/Transvestigate.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../GenderAcceptance/Mian/JobGivers/TransvestigateSpree.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../GenderAcceptance/Mian/JoyGivers/Transvestigate.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../GenderAcceptance/Mian/MentalStateWorkers/TransvestigateSpree.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../GenderAcceptance/Mian/MentalStates/TransvestigateSpree.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../GenderAcceptance/Mian/Needs/Chaser_Need.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../GenderAcceptance/Mian/Patches/Faction.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../GenderAcceptance/Mian/Patches/GenderUtilityPatch.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../GenderAcceptance/Mian/Patches/GrammarUtilityPatch.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../GenderAcceptance/Mian/Patches/InteractionWorker_RomanceAttempt.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../GenderAcceptance/Mian/Patches/LovePartnerRelationUtility.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../GenderAcceptance/Mian/Patches/MemoryThoughtHandler.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../GenderAcceptance/Mian/Patches/Mod Integration/Dysphoria.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../GenderAcceptance/Mian/Patches/Mod Integration/IntimacyLovin.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../GenderAcceptance/Mian/Patches/Mod Integration/SimpleTrans.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../GenderAcceptance/Mian/Patches/Mod Integration/WayBetterRomance.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../GenderAcceptance/Mian/Patches/PawnData.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../GenderAcceptance/Mian/Patches/PawnPatch.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../GenderAcceptance/Mian/Patches/Pawn_InteractionsTracker.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../GenderAcceptance/Mian/Patches/Pawn_RelationsTracker.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../GenderAcceptance/Mian/ThoughtWorkers/Chaser_Need.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../GenderAcceptance/Mian/ThoughtWorkers/InternalTransphobia.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../GenderAcceptance/Mian/ThoughtWorkers/IsCisphobic.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../GenderAcceptance/Mian/ThoughtWorkers/IsTransgenderNegative.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../GenderAcceptance/Mian/ThoughtWorkers/IsTransgenderPositive.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../GenderAcceptance/Mian/ThoughtWorkers/IsTransphobic.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../GenderAcceptance/Mian/ThoughtWorkers/PreceptTransgender.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../GenderAcceptance/Mian/ThoughtWorkers/Similarity.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../GenderAcceptance/Mian/TransKnowledgeManager.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../GenderAcceptance/Mian/TransphobicStatus.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../GenderAcceptance/Mian/Utilities/Constants.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../GenderAcceptance/Mian/Utilities/GenderUtility.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../GenderAcceptance/Mian/Utilities/Helper.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../GenderAcceptance/Mian/Utilities/TransvestigateUtility.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../GenderAcceptance/Mian/Verbs/Transvestigate.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../GenderAcceptance/Properties/AssemblyInfo.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../loadFolders.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../loadFolders.xml" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
+  </component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;MianReplicate&quot;
+  }
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/MianReplicate/Gender-Acceptance.git&quot;,
+    &quot;accountId&quot;: &quot;96888ba1-f6a9-43d1-9b00-08fd12771b19&quot;
+  }
+}</component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/46372f5dadbf4af8939e608076251180f09200/02/5c58b849/IdeoStyleTracker.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/46372f5dadbf4af8939e608076251180f09200/3d/b98ae0be/Ideo.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/46372f5dadbf4af8939e608076251180f09200/54/28dc867b/PreceptComp_Apparel_Desired.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/46372f5dadbf4af8939e608076251180f09200/57/0ff71ffe/ApparelRequirement.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/46372f5dadbf4af8939e608076251180f09200/62/bd42113c/Apparel.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/46372f5dadbf4af8939e608076251180f09200/8a/1cc82598/Precept_Apparel.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/46372f5dadbf4af8939e608076251180f09200/90/27657689/Thing.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/46372f5dadbf4af8939e608076251180f09200/bd/26318343/ThingWithComps.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/46372f5dadbf4af8939e608076251180f09200/c1/81528f48/Pawn_ApparelTracker.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/46372f5dadbf4af8939e608076251180f09200/c9/d6e38919/ApparelUtility.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/46372f5dadbf4af8939e608076251180f09200/ca/3e8f1ba3/Pawn.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/46372f5dadbf4af8939e608076251180f09200/ce/fdefc909/ThingDef.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/46372f5dadbf4af8939e608076251180f09200/cf/87336a2e/PawnKindDef.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/46372f5dadbf4af8939e608076251180f09200/d9/c1729833/StyleGender.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/46372f5dadbf4af8939e608076251180f09200/dd/0f8292e1/ApparelProperties.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/46372f5dadbf4af8939e608076251180f09200/ec/edd074aa/StyleItemDef.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/46372f5dadbf4af8939e608076251180f09200/f1/45b832cd/StyleItemCategoryDef.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/46372f5dadbf4af8939e608076251180f09200/fb/66c43ce2/HeadTypeDef.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/62cd6d69024c4ddd9b786dd901bdb43d1be00/4b/5f8f0b7a/SimpleTransPregnancyUtility.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/f7a9e19fc1544299a67a6692e164bd0cf09200/3e/eb783f6a/HediffSet.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Properties/AssemblyInfo.cs" root0="FORCE_HIGHLIGHTING" />
+  </component>
+  <component name="MetaFilesCheckinStateConfiguration" checkMetaFiles="true" />
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 3
+}</component>
+  <component name="ProjectId" id="34qCeWxG6bJGUfzdcakFuBLst5O" />
+  <component name="ProjectViewState">
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  }
+}</component>
+  <component name="RunManager">
+    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost">
+      <option name="allowRunningInParallel" value="false" />
+      <option name="listenPortForConnections" value="false" />
+      <option name="pid" />
+      <option name="projectPathOnTarget" />
+      <option name="runtimes">
+        <list />
+      </option>
+      <option name="selectedOptions">
+        <list />
+      </option>
+      <method v="2" />
+    </configuration>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="cec9abca-034f-4f40-8e9c-b85eec383ca5" name="Changes" comment="" />
+      <created>1761931813377</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1761931813377</updated>
+      <workItem from="1761931814129" duration="226000" />
+      <workItem from="1761932045795" duration="37000" />
+      <workItem from="1761932085307" duration="51000" />
+      <workItem from="1761932151062" duration="5437000" />
+      <workItem from="1762200505955" duration="4021000" />
+      <workItem from="1762450922856" duration="954000" />
+      <workItem from="1762842170821" duration="911000" />
+      <workItem from="1762845131790" duration="90000" />
+      <workItem from="1762822680571" duration="1050000" />
+      <workItem from="1762894921588" duration="1649000" />
+      <workItem from="1762897109141" duration="4110000" />
+      <workItem from="1762902183789" duration="3000" />
+      <workItem from="1762902201755" duration="970000" />
+      <workItem from="1764045703774" duration="2692000" />
+      <workItem from="1764048582094" duration="925000" />
+    </task>
+    <task id="LOCAL-00001" summary="Removed RJW">
+      <option name="closed" value="true" />
+      <created>1761931892599</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1761931892599</updated>
+    </task>
+    <task id="LOCAL-00002" summary="Added other possible trans dependencies">
+      <option name="closed" value="true" />
+      <created>1761947011184</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1761947011184</updated>
+    </task>
+    <task id="LOCAL-00003" summary="work on rules">
+      <option name="closed" value="true" />
+      <created>1762220636089</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1762220636089</updated>
+    </task>
+    <task id="LOCAL-00004" summary="Added extra chaser flavor :D">
+      <option name="closed" value="true" />
+      <created>1762842294520</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1762842294520</updated>
+    </task>
+    <task id="LOCAL-00005" summary="Added extra chaser flavor :D">
+      <option name="closed" value="true" />
+      <created>1762842330547</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1762842330547</updated>
+    </task>
+    <task id="LOCAL-00006" summary="Refactored pawn patch to be more original code">
+      <option name="closed" value="true" />
+      <created>1762823323016</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1762823323016</updated>
+    </task>
+    <task id="LOCAL-00007" summary="Gendered points are additionally influenced by apparel, tattoos, and beards.">
+      <option name="closed" value="true" />
+      <created>1762898954351</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1762898954351</updated>
+    </task>
+    <task id="LOCAL-00008" summary="Style genders can now be overridden and properly applied to gender points&#10;Still need to fix apparel from what it seems">
+      <option name="closed" value="true" />
+      <created>1762902277877</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1762902277877</updated>
+    </task>
+    <task id="LOCAL-00009" summary="Small hotfix towards interaction tracker with gender tracking">
+      <option name="closed" value="true" />
+      <created>1764046399561</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1764046399561</updated>
+    </task>
+    <task id="LOCAL-00010" summary="Added documentation to main utility">
+      <option name="closed" value="true" />
+      <created>1764047872717</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1764047872717</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="UnityCheckinConfiguration" checkUnsavedScenes="true" />
+  <component name="UnityProjectConfiguration" hasMinimizedUI="false" />
+  <component name="UnityProjectDiscoverer">
+    <option name="hasUnityReference" value="true" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
+    <MESSAGE value="Removed RJW" />
+    <MESSAGE value="Added other possible trans dependencies" />
+    <MESSAGE value="work on rules" />
+    <MESSAGE value="Added extra chaser flavor :D" />
+    <MESSAGE value="Refactored pawn patch to be more original code" />
+    <MESSAGE value="Gendered points are additionally influenced by apparel, tattoos, and beards." />
+    <MESSAGE value="Style genders can now be overridden and properly applied to gender points&#10;Still need to fix apparel from what it seems" />
+    <MESSAGE value="Small hotfix towards interaction tracker with gender tracking" />
+    <MESSAGE value="Added documentation to main utility" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added documentation to main utility" />
+  </component>
+</project>

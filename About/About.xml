@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ModMetaData>
-    <name>Topic of Gender</name>
+    <name>Romance &amp; Intimacy On The Rim</name>
     <author>MianReplicate</author>
-    <packageId>MianReplicate.GenderAcceptance</packageId>
+    <packageId>MianReplicate.R_IOTR</packageId>
     <supportedVersions>
         <li>1.6</li>
     </supportedVersions>
-    <modVersion>1.1</modVersion>
+    <modVersion>1.0</modVersion>
     <modDependencies>
         <li>
             <packageId>brrainz.harmony</packageId>
@@ -15,19 +15,20 @@
             <downloadUrl>https://github.com/pardeike/HarmonyRimWorld/releases/latest</downloadUrl>
         </li>
         <li>
-            <packageId>runaway.simpletrans</packageId>
-            <displayName>Requires Simple Trans, Intimacy - Gender Works, or Identity: Dysphoria</displayName>
-            <steamWorkshopUrl>steam://url/CommunityFilePage/3516912373</steamWorkshopUrl>
-            <downloadUrl>https://steamcommunity.com/sharedfiles/filedetails/?id=3516912373</downloadUrl>
-
-            <alternativePackageIds IgnoreIfNoMatchingField="True">
-                <li>lovelydovey.sex.withrosaline</li>
-                <li>cammy.identity.gender</li>
-            </alternativePackageIds>
+            <packageId>lovelydovey.sex.witheuterpe</packageId>
+            <displayName>Intimacy - A Loving Expansion</displayName>
+            <steamWorkshopUrl>steam://url/CommunityFilePage/3498422643</steamWorkshopUrl>
+            <downloadUrl>https://steamcommunity.com/sharedfiles/filedetails/?id=3498422643</downloadUrl>
+        </li>
+        <li>
+            <packageId>telardo.romanceontherim</packageId>
+            <displayName>Romance On The Rim</displayName>
+            <steamWorkshopUrl>steam://url/CommunityFilePage/2654432921</steamWorkshopUrl>
+            <downloadUrl>https://steamcommunity.com/sharedfiles/filedetails/?id=2654432921</downloadUrl>
         </li>
     </modDependencies>
 
-    <description>Topic of Gender is a mod that adds traits revolving around transphobia, cisphobia, and chasers to Rimworld.</description>
+    <description>Romance &amp; Intimacy On The Rim is a RimWorld mod that adds compatibility between two well known liked mods: Romance On The Rim &amp; Intimacy - a Loving Expansion.</description>
     <loadAfter>
         <li>Ludeon.RimWorld</li>
         <li>brrainz.harmony</li>
