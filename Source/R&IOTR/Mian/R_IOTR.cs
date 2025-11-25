@@ -41,7 +41,7 @@ public class GenderAcceptance : Mod
     {
         var listingStandard = new Listing_Standard();
         listingStandard.Begin(inRect);
-        listingStandard.CheckboxLabeled("R&IOTR.EnableLoggingExplanation".Translate(),
+        listingStandard.CheckboxLabeled("R_IOTR.EnableLoggingExplanation".Translate(),
             ref R_IOTRSettings.Instance.enableLogging);
         listingStandard.End();
         base.DoSettingsWindowContents(inRect);
@@ -49,6 +49,6 @@ public class GenderAcceptance : Mod
 
     public override string SettingsCategory()
     {
-        return "R&IOTR.ModName".Translate();
+        return "R_IOTR.ModName".Translate();
     }
 }
