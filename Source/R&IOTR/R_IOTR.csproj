@@ -19,7 +19,7 @@
   </PropertyGroup>
 
   <PropertyGroup>
-    <ModName>Topic of Gender</ModName>
+    <ModName>R&amp;IOTR</ModName>
   </PropertyGroup>
   
   <ItemGroup>
@@ -70,7 +70,7 @@
 
   <!-- Post-build deployment -->
   <Target Name="PostBuild" AfterTargets="PostBuildEvent">
-    <Message Text="Deploying Gender Acceptance to RimWorld..." Importance="high" />
+    <Message Text="Deploying Romance &amp; Intimacy On The Rim to RimWorld..." Importance="high" />
 
     <!-- Remove existing mod from RimWorld if it exists -->
     <RemoveDir Directories="$(RimWorldPath)\Mods\$(ModName)" Condition="Exists('$(RimWorldPath)\Mods\$(ModName)')" />
