@@ -6,6 +6,7 @@ This mod was made because the creators do not wish to add compatibility for the 
 ## Additions ➕
 - Intimacy bar is filled appropriately whenever certain actions from Romance On The Rim occur. For example, if two pawns kiss or one plays a song for the other, their intimacy bar goes up.
 - Romance bar is filled appropriately whenever certain actions from Intimacy - a Loving Expansion occur. For example, after lovin', the romance bar between two pawns may fill up if they are together.
+- Low intimacy will make partners more likely to trigger romantic actions with one another. That way, partners don't just feel lonely!
 
 If there are any issues I have missed, please let me know and I will patch them!
 
