@@ -15,6 +15,8 @@ public static class Startup
 
         var harmony = new Harmony("rimworld.mian.r_iotr");
         harmony.PatchAll();
+
+        Harmony.DEBUG = true;
     }
 }
 
@@ -30,9 +32,9 @@ public class R_IOTRSettings : ModSettings
     }
 }
 
-public class GenderAcceptance : Mod
+public class R_IOTR : Mod
 {
-    public GenderAcceptance(ModContentPack content) : base(content)
+    public R_IOTR(ModContentPack content) : base(content)
     {
         R_IOTRSettings.Instance = GetSettings<R_IOTRSettings>();
     }

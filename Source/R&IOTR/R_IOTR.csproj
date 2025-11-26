@@ -56,15 +56,23 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Mian\Patches.cs" />
+    <Compile Include="Mian\IntimacyPatches.cs" />
+    <Compile Include="Mian\ROTRPatches.cs" />
     <Compile Include="Mian\R_IOTR.cs" />
     <Compile Include="Mian\Utilities\CompatibilityUtility.cs" />
     <Compile Include="Mian\Utilities\Helper.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <PackageReference Include="Krafs.Publicizer" Version="2.3.0">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
     <PackageReference Include="Lib.Harmony.Ref" Version="2.4.1" />
     <PackageReference Include="System.Reflection.Emit" Version="4.7.0" />
+
+    <Publicize Include="RomanceOnTheRim:RomanceOnTheRim.LordJob_RomanticInteraction.InteractionDuration" />
+    <Publicize Include="RomanceOnTheRim:RomanceOnTheRim.LordJob_RomanticInteraction.RomanceNeedGainFromInteraction" />  
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 
