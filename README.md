@@ -4,8 +4,8 @@ Romance & Intimacy On The Rim is a RimWorld mod that adds compatibility between 
 This mod was made because the creators do not wish to add compatibility for the other, and I am a fellow person who has way too much time on their hands and loves using both :3
 
 ## Additions ➕
-- Intimacy bar is filled appropriately whenever certain actions from Romance On The Rim occur.
-- Romance bar is filled appropriately whenever certain actions from Intimacy - a Loving Expansion occur.
+- Intimacy bar is filled appropriately whenever certain actions from Romance On The Rim occur. For example, if two pawns kiss or one plays a song for the other, their intimacy bar goes up.
+- Romance bar is filled appropriately whenever certain actions from Intimacy - a Loving Expansion occur. For example, after lovin', the romance bar between two pawns may fill up if they are together.
 
 If there are any issues I have missed, please let me know and I will patch them!
 
