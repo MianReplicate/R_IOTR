@@ -7,7 +7,7 @@ using Verse;
 namespace R_IOTR.Mian;
 
 [HarmonyPatch(typeof(LordJob_RomanticInteraction))]
-public static class ROTRPatches
+public static class RomanticInteractionPatches
 {
     [HarmonyPatch("ApplyPartialOutcome")]
     [HarmonyPostfix]
