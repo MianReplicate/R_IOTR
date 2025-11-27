@@ -73,7 +73,8 @@
     <PackageReference Include="System.Reflection.Emit" Version="4.7.0" />
 
     <Publicize Include="RomanceOnTheRim:RomanceOnTheRim.LordJob_RomanticInteraction.InteractionDuration" />
-    <Publicize Include="RomanceOnTheRim:RomanceOnTheRim.LordJob_RomanticInteraction.RomanceNeedGainFromInteraction" />  
+    <Publicize Include="RomanceOnTheRim:RomanceOnTheRim.LordJob_RomanticInteraction.RomanceNeedGainFromInteraction" />
+    <Publicize Include="RomanceOnTheRim:RomanceOnTheRim.LordJob_RomanticInteraction.InteractionDef" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 

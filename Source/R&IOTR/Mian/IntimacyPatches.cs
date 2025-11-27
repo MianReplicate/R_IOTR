@@ -16,6 +16,6 @@ public static class IntimacyPatches
         if (pawn == null || partner == null)
             return;
         if(pawn.GetLoveRelations(false).Exists(relation => relation.otherPawn == partner))
-            pawn.GainRomance(0.5f); // this isn't a magic number i promise, i saw this in the ROTR code for lovin
+            pawn.GainRomance(0.5f, ThoughtDefOf.GotSomeLovin.defName); // this isn't a magic number i promise, i saw this in the ROTR code for lovin
     }
 }

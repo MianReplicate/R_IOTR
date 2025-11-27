@@ -61,7 +61,8 @@ public class NeedRomancePatch
                 yield return new CodeInstruction(OpCodes.Nop);
                 yield return CodeInstruction.LoadLocal(intimacyLocal.LocalIndex);
                 yield return CodeInstruction.Call(typeof(Need), "get_CurLevel");
-                yield return new CodeInstruction(OpCodes.Ldc_R4, 0.4f);
+                yield return CodeInstruction.LoadField(typeof(R_IOTRSettings), nameof(R_IOTRSettings.Instance));
+                yield return CodeInstruction.LoadField(typeof(R_IOTRSettings), nameof(R_IOTRSettings.intimacyInterval));
                 yield return new CodeInstruction(OpCodes.Bgt_Un_S, toExit);
                 
                 yield return new CodeInstruction(OpCodes.Nop).WithLabels(returnLabel);

@@ -18,8 +18,8 @@ public static class RomanticInteractionPatches
         
         var intimacy = Mathf.Clamp01( (Find.TickManager.TicksGame - __instance.StartInteractionTick) / __instance.InteractionDuration
         ) * __instance.RomanceNeedGainFromInteraction;
-        __instance.Initiator.GainIntimacy(intimacy, true);
-        __instance.Recipient.GainIntimacy(intimacy, true);
+        __instance.Initiator.GainIntimacy(intimacy, true, __instance.InteractionDef?.defName);
+        __instance.Recipient.GainIntimacy(intimacy, true, __instance.InteractionDef?.defName);
     }
         
     [HarmonyPatch("ApplyFinishOutcome")]
@@ -27,7 +27,7 @@ public static class RomanticInteractionPatches
     public static void AddFinishOutcomeCompatibility(LordJob_RomanticInteraction __instance)
     {
         var intimacy = __instance.RomanceNeedGainFromInteraction;
-        __instance.Initiator.GainIntimacy(intimacy, true);
-        __instance.Recipient.GainIntimacy(intimacy, true);
+        __instance.Initiator.GainIntimacy(intimacy, true, __instance.InteractionDef?.defName);
+        __instance.Recipient.GainIntimacy(intimacy, true, __instance.InteractionDef?.defName);
     }
 }
