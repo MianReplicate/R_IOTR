@@ -35,7 +35,14 @@ public class NeedRomancePatch
             if (foundCategory && !added && instruction.Branches(out var toExit))
             {
                 added = true;
-                
+
+                // If the pawn has no intimacy need, this will completely skip past
+                yield return CodeInstruction.LoadArgument(0);
+                yield return CodeInstruction.LoadField(typeof(Need_Romance), "pawn");
+                yield return CodeInstruction.Call(typeof(CommonChecks), nameof(CommonChecks.HasNoIntimacyTrait));
+                yield return new CodeInstruction(OpCodes.Brtrue, returnLabel);
+
+                // pawn.needs?.TryGetNeed<Need_Intimacy>()
                 yield return CodeInstruction.LoadArgument(0);
                 yield return CodeInstruction.LoadField(typeof(Need_Romance), "pawn");
                 yield return CodeInstruction.LoadField(typeof(Pawn), nameof(Pawn.needs));
@@ -45,7 +52,7 @@ public class NeedRomancePatch
                 yield return new CodeInstruction(OpCodes.Pop);
                 yield return new CodeInstruction(OpCodes.Ldnull);
                 yield return new CodeInstruction(OpCodes.Br_S, label2);
-
+                
                 yield return CodeInstruction.Call(typeof(Pawn_NeedsTracker), nameof(Pawn_NeedsTracker.TryGetNeed), generics: new[]{typeof(Need_Intimacy)}).WithLabels(label1);
                 
                 yield return CodeInstruction.StoreLocal(intimacyLocal.LocalIndex).WithLabels(label2);
@@ -58,6 +65,7 @@ public class NeedRomancePatch
                 yield return CodeInstruction.LoadLocal(isNullLocal.LocalIndex);
                 yield return new CodeInstruction(OpCodes.Brfalse_S, returnLabel);
 
+                // R_IOTRSettings.Instance.intimacyInterval > pawn.needs?.TryGetNeed<Need_Intimacy>().CurLevel
                 yield return new CodeInstruction(OpCodes.Nop);
                 yield return CodeInstruction.LoadLocal(intimacyLocal.LocalIndex);
                 yield return CodeInstruction.Call(typeof(Need), "get_CurLevel");
