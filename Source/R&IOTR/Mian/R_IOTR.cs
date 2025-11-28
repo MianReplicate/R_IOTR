@@ -18,7 +18,8 @@ public static class Startup
         var harmony = new Harmony("rimworld.mian.r_iotr");
         harmony.PatchAll();
 
-        Harmony.DEBUG = true;
+        if(R_IOTRSettings.Instance.enableLogging)
+            Harmony.DEBUG = true;
     }
 }
 
