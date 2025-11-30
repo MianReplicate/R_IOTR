@@ -1,4 +1,5 @@
 ﻿using LoveyDoveySexWithEuterpe;
+using RimWorld;
 using RomanceOnTheRim;
 using Verse;
 
@@ -6,6 +7,11 @@ namespace R_IOTR.Mian.Utilities;
 
 public static class CompatibilityUtility
 {
+    public static bool HasNoIntimacyTrait(this Pawn pawn)
+    {
+        return !pawn.needs?.TryGetNeed(DefDatabase<NeedDef>.GetNamed("SEX_Intimacy"), out Need _) ?? true;
+    }
+    
     public static void GainIntimacy(this Pawn pawn, float amount, bool forRomance, string label=null)
     {
         amount *= R_IOTRSettings.Instance.intimacyMultiplier;

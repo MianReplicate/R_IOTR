@@ -1,8 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Reflection.Emit;
 using HarmonyLib;
 using LoveyDoveySexWithEuterpe;
+using R_IOTR.Mian.Utilities;
 using RimWorld;
 using RomanceOnTheRim;
 using Verse;
@@ -39,7 +39,7 @@ public class NeedRomancePatch
                 // If the pawn has no intimacy need, this will completely skip past
                 yield return CodeInstruction.LoadArgument(0);
                 yield return CodeInstruction.LoadField(typeof(Need_Romance), "pawn");
-                yield return CodeInstruction.Call(typeof(CommonChecks), nameof(CommonChecks.HasNoIntimacyTrait));
+                yield return CodeInstruction.Call(typeof(CompatibilityUtility), nameof(CompatibilityUtility.HasNoIntimacyTrait));
                 yield return new CodeInstruction(OpCodes.Brtrue, returnLabel);
 
                 // pawn.needs?.TryGetNeed<Need_Intimacy>()
