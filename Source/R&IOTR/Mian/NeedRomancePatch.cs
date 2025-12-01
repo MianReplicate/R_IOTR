@@ -39,8 +39,8 @@ public class NeedRomancePatch
                 // If the pawn has no intimacy need, this will completely skip past
                 yield return CodeInstruction.LoadArgument(0);
                 yield return CodeInstruction.LoadField(typeof(Need_Romance), "pawn");
-                yield return CodeInstruction.Call(typeof(CompatibilityUtility), nameof(CompatibilityUtility.HasNoIntimacyTrait));
-                yield return new CodeInstruction(OpCodes.Brtrue, returnLabel);
+                yield return CodeInstruction.Call(typeof(CompatibilityUtility), nameof(CompatibilityUtility.HasIntimacyNeed));
+                yield return new CodeInstruction(OpCodes.Brfalse, returnLabel);
 
                 // pawn.needs?.TryGetNeed<Need_Intimacy>()
                 yield return CodeInstruction.LoadArgument(0);

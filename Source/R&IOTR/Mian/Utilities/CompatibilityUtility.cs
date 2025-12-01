@@ -7,9 +7,9 @@ namespace R_IOTR.Mian.Utilities;
 
 public static class CompatibilityUtility
 {
-    public static bool HasNoIntimacyTrait(this Pawn pawn)
+    public static bool HasIntimacyNeed(this Pawn pawn)
     {
-        return !pawn.needs?.TryGetNeed(DefDatabase<NeedDef>.GetNamed("SEX_Intimacy"), out Need _) ?? true;
+        return pawn.needs?.TryGetNeed(DefDatabase<NeedDef>.GetNamed("SEX_Intimacy"), out Need _) ?? false;
     }
     
     public static void GainIntimacy(this Pawn pawn, float amount, bool forRomance, string label=null)
