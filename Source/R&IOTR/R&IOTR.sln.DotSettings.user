@@ -374,4 +374,5 @@
   &lt;Assembly Path="D:\SteamLibrary\steamapps\common\RimWorld\RimWorldWin64_Data\Managed\Assembly-CSharp.dll" /&gt;&#xD;
   &lt;Assembly Path="C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.8\System.Core.dll" /&gt;&#xD;
   &lt;Assembly Path="C:\Program Files (x86)\Steam\steamapps\common\RimWorld\RimWorldWin64_Data\Managed\Assembly-CSharp.dll" /&gt;&#xD;
+  &lt;Assembly Path="C:\Users\docgo\RiderProjects\R_IOTR\Source\R&amp;amp;IOTR\obj\Build\PublicizedAssemblies\RomanceOnTheRim.B7F06D545929256478A1E58737FF29A3\RomanceOnTheRim.dll" /&gt;&#xD;
 &lt;/AssemblyExplorer&gt;</s:String></wpf:ResourceDictionary>
